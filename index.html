@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KutumbTree - Legal & Policy Center</title>
+    <script>
+        // Auto-redirect to specific policy if requested via URL parameter
+        const params = new URLSearchParams(window.location.search);
+        const policy = params.get('policy');
+        if (policy) {
+            const routes = {
+                'privacy': 'privacy-policy.html',
+                'terms': 'terms-of-service.html',
+                'data-safety': 'data-safety.html',
+                'child-safety': 'child-safety.html',
+                'cookies': 'cookie-policy.html',
+                'acceptable-use': 'acceptable-use.html',
+                'accessibility': 'accessibility.html'
+            };
+            if (routes[policy]) {
+                window.location.href = routes[policy];
+            }
+        }
+    </script>
     <style>
         * {
             margin: 0;
