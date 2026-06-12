@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KutumbTree Data Safety</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #667eea;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #667eea;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #555;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .checkmark {
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .xmark {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .security-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 5px 5px 5px 0;
+        }
+
+        .important {
+            background-color: #fff8e1;
+            border-left-color: #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            border-left: 4px solid #ffc107;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Policies</a>
+
+        <header>
+            <h1>🛡️ KutumbTree Data Safety Statement</h1>
+            <p class="last-updated">Last Updated: June 12, 2026</p>
+        </header>
+
+        <div class="section">
+            <h2>Data Safety Overview</h2>
+            <p>At KutumbTree, protecting your family's data is our highest priority. This document outlines our data safety practices and security measures.</p>
+            <div style="margin: 20px 0;">
+                <span class="security-badge">✓ HTTPS Encryption</span>
+                <span class="security-badge">✓ Password Hashing</span>
+                <span class="security-badge">✓ JWT Tokens</span>
+                <span class="security-badge">✓ Daily Backups</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>1. Data Collection</h2>
+            <h3>What We Collect</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Collected</th>
+                        <th>Purpose</th>
+                        <th>Shared</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Account Email</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Login & account recovery</td>
+                        <td><span class="xmark">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Password</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Account authentication</td>
+                        <td><span class="xmark">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Family Member Info</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Family tree management</td>
+                        <td>Only with your consent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Photos/Media</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Display in family tree</td>
+                        <td>Only with your consent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contact Info</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Invite family members</td>
+                        <td>Only with your consent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Device Information</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Error reporting</td>
+                        <td><span class="xmark">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usage Analytics</strong></td>
+                        <td><span class="checkmark">✓</span></td>
+                        <td>Service improvement</td>
+                        <td><span class="xmark">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Location Data</strong></td>
+                        <td><span class="xmark">✗</span></td>
+                        <td>Not collected</td>
+                        <td><span class="xmark">✗</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>2. Encryption & Data Protection</h2>
+            <h3>In-Transit Security</h3>
+            <ul>
+                <li><strong>HTTPS/TLS:</strong> All communication is encrypted using TLS 1.2 or higher</li>
+                <li><strong>Certificate:</strong> Valid SSL/TLS certificate from trusted certificate authority</li>
+                <li><strong>Handshake:</strong> Secure key exchange during connection establishment</li>
+            </ul>
+
+            <h3>At-Rest Security</h3>
+            <ul>
+                <li><strong>Database:</strong> Data stored on secured database servers</li>
+                <li><strong>Backups:</strong> Encrypted backup storage with restricted access</li>
+                <li><strong>Access Control:</strong> Role-based access to database resources</li>
+            </ul>
+
+            <h3>Password Security</h3>
+            <ul>
+                <li><strong>Algorithm:</strong> Bcrypt hashing with salt</li>
+                <li><strong>Never Stored:</strong> Plain-text passwords never stored or logged</li>
+                <li><strong>Minimum Length:</strong> 8 characters required</li>
+                <li><strong>Complexity:</strong> Recommended mix of uppercase, lowercase, numbers, symbols</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Authentication & Authorization</h2>
+            <h3>Login Security</h3>
+            <ul>
+                <li><strong>JWT Tokens:</strong> JSON Web Tokens with 24-hour expiration</li>
+                <li><strong>Refresh Tokens:</strong> Secure refresh token rotation for session extension</li>
+                <li><strong>CORS Protection:</strong> Cross-Origin Resource Sharing properly configured</li>
+            </ul>
+
+            <h3>Access Control</h3>
+            <ul>
+                <li><strong>User Isolation:</strong> Users can only access their own data</li>
+                <li><strong>Family Sharing:</strong> Granular permissions for shared family trees</li>
+                <li><strong>Admin Controls:</strong> Tools to manage access and revoke permissions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Data Retention & Deletion</h2>
+            <h3>Retention Policies</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Retention Period</th>
+                        <th>Deletion Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>User Accounts</strong></td>
+                        <td>Until deletion</td>
+                        <td>Permanent on request</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Family Tree Data</strong></td>
+                        <td>Until deletion</td>
+                        <td>Permanent on request</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Server Logs</strong></td>
+                        <td>30 days</td>
+                        <td>Auto-deleted after 30 days</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backups</strong></td>
+                        <td>90 days max</td>
+                        <td>Auto-purged after 90 days</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Session Tokens</strong></td>
+                        <td>24 hours</td>
+                        <td>Auto-expired</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Deletion Process</h3>
+            <p>When you request account deletion:</p>
+            <ol>
+                <li>All personal data is permanently removed from active database within 24 hours</li>
+                <li>Backups containing your data are purged within 90 days</li>
+                <li>Server logs are automatically deleted after 30 days</li>
+                <li>You receive confirmation email after deletion is complete</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>5. Data Sharing & Third Parties</h2>
+            <h3>We DO NOT Share Data With:</h3>
+            <ul>
+                <li>Advertisers or marketers</li>
+                <li>Data brokers</li>
+                <li>Social media platforms</li>
+                <li>Analytics services (for personal data)</li>
+                <li>Any commercial entities</li>
+            </ul>
+
+            <h3>Limited Sharing For Service Delivery:</h3>
+            <ul>
+                <li><strong>Railway (Hosting):</strong> Servers host your data (encrypted)</li>
+                <li><strong>Database Services:</strong> Data management infrastructure</li>
+                <li><strong>Family Members:</strong> Only information you choose to share</li>
+            </ul>
+
+            <h3>Legal Compliance:</h3>
+            <p>We may disclose data when legally required by:</p>
+            <ul>
+                <li>Court orders or subpoenas</li>
+                <li>Law enforcement requests</li>
+                <li>Government agencies (with proper legal process)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Security Practices</h2>
+            <h3>Infrastructure Security</h3>
+            <ul>
+                <li><strong>Firewall:</strong> Network firewall protection</li>
+                <li><strong>DDoS Protection:</strong> Rate limiting and traffic monitoring</li>
+                <li><strong>Access Logs:</strong> All access attempts logged and monitored</li>
+                <li><strong>Intrusion Detection:</strong> Automated threat detection systems</li>
+            </ul>
+
+            <h3>Application Security</h3>
+            <ul>
+                <li><strong>Input Validation:</strong> All user input validated and sanitized</li>
+                <li><strong>SQL Injection Prevention:</strong> Prepared statements used</li>
+                <li><strong>XSS Protection:</strong> Content Security Policy headers</li>
+                <li><strong>CSRF Protection:</strong> Token-based protection</li>
+            </ul>
+
+            <h3>Monitoring & Updates</h3>
+            <ul>
+                <li><strong>Security Patches:</strong> Applied within 24 hours of release</li>
+                <li><strong>Dependency Updates:</strong> Regular updates of libraries and frameworks</li>
+                <li><strong>Security Scanning:</strong> Regular vulnerability scans</li>
+                <li><strong>24/7 Monitoring:</strong> Continuous monitoring for threats</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Compliance & Standards</h2>
+            <p>KutumbTree adheres to the following standards and regulations:</p>
+            <ul>
+                <li><strong>GDPR:</strong> General Data Protection Regulation (EU)</li>
+                <li><strong>CCPA:</strong> California Consumer Privacy Act</li>
+                <li><strong>COPPA:</strong> Children's Online Privacy Protection Act (US)</li>
+                <li><strong>HIPAA:</strong> Not applicable (health data not collected)</li>
+                <li><strong>Industry Standards:</strong> OWASP Top 10 compliance</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. Your Rights & Controls</h2>
+            <h3>Data Access</h3>
+            <p>You can request a complete copy of your data at any time. Contact: p.jesal.work@gmail.com</p>
+
+            <h3>Data Correction</h3>
+            <p>You can update or correct your family tree data directly in the app.</p>
+
+            <h3>Data Deletion</h3>
+            <p>You can delete individual entries, trees, or your entire account with one click.</p>
+
+            <h3>Data Portability</h3>
+            <p>You can export your family tree data in standard formats for use with other services.</p>
+
+            <h3>Opt-Out Options</h3>
+            <ul>
+                <li>Email notifications can be disabled in settings</li>
+                <li>Analytics tracking can be disabled in privacy settings</li>
+                <li>Unsubscribe links in all non-critical emails</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <strong>Security is a Shared Responsibility:</strong> While we implement strong security measures, you also have a role:
+            <ul style="margin-top: 10px;">
+                <li>Use a strong, unique password</li>
+                <li>Never share your login credentials</li>
+                <li>Keep your device software updated</li>
+                <li>Report suspicious activity immediately</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>9. Security Incident Response</h2>
+            <h3>If a Data Breach Occurs:</h3>
+            <ol>
+                <li>We immediately isolate affected systems</li>
+                <li>Investigate the scope and cause of the breach</li>
+                <li>Notify affected users within 72 hours</li>
+                <li>Provide guidance on protective measures</li>
+                <li>Cooperate with law enforcement if required</li>
+            </ol>
+
+            <h3>Report a Security Issue:</h3>
+            <p>If you discover a security vulnerability, please responsibly disclose it to:</p>
+            <p><strong>security@kutumbtree.com</strong> (preferred with PGP if available)</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Contact Us</h2>
+            <p>Questions about data safety or security?</p>
+            <ul>
+                <li><strong>Email:</strong> p.jesal.work@gmail.com</li>
+                <li><strong>Support:</strong> support@kutumbtree.com</li>
+                <li><strong>Security Issues:</strong> security@kutumbtree.com</li>
+                <li><strong>Website:</strong> https://kutumbtree.up.railway.app</li>
+            </ul>
+
+            <p><strong>Response Time:</strong> We aim to respond to security inquiries within 24 hours.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 KutumbTree. All rights reserved. | <a href="index.html">Back to Policies</a></p>
+        </footer>
+    </div>
+</body>
+</html>
