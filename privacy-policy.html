@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KutumbTree Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        h1 {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .important {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .contact-info {
+            background-color: #e7f3ff;
+            border-left-color: #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌳 KutumbTree Privacy Policy</h1>
+    <p class="last-updated">Last Updated: June 2026</p>
+
+    <div class="section">
+        <h2>1. Overview</h2>
+        <p>
+            KutumbTree is a family tree management application that helps you create, organize, and share your family's genealogical information. This Privacy Policy explains how we collect, use, and protect your personal information.
+        </p>
+        <p>
+            By using KutumbTree, you agree to the terms of this Privacy Policy. If you do not agree with our practices, please do not use the app.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>2. Information We Collect</h2>
+
+        <h3>2.1 Account Information</h3>
+        <ul>
+            <li><strong>Username and Email Address:</strong> Required to create your account and enable login</li>
+            <li><strong>Display Name:</strong> The name you choose to display on your profile</li>
+            <li><strong>Password:</strong> Encrypted and stored securely (never transmitted unencrypted)</li>
+        </ul>
+
+        <h3>2.2 Family Tree Data</h3>
+        <p>You may voluntarily provide the following information about family members:</p>
+        <ul>
+            <li>Names, dates of birth, and dates of death</li>
+            <li>Gender and relationship information</li>
+            <li>Profile photos and biographical information</li>
+            <li>Family notes and historical records</li>
+        </ul>
+
+        <h3>2.3 Usage and Device Information</h3>
+        <ul>
+            <li><strong>Log Data:</strong> Server logs recording API requests (timestamps, endpoints, status codes)</li>
+            <li><strong>Device Information:</strong> Device type, OS version, app version (for error reporting)</li>
+            <li><strong>Session Information:</strong> Authentication tokens and refresh tokens for session management</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. How We Use Your Information</h2>
+        <ul>
+            <li><strong>Account Management:</strong> Creating and maintaining your account, authentication, and access control</li>
+            <li><strong>Service Delivery:</strong> Storing, organizing, and retrieving your family tree data</li>
+            <li><strong>Collaboration:</strong> Enabling you to invite family members and manage shared access to trees</li>
+            <li><strong>User Generated Content (UGC):</strong> Displaying and managing content you create (photos, notes, member information)</li>
+            <li><strong>Error Tracking & Improvements:</strong> Identifying and fixing bugs, improving app performance</li>
+            <li><strong>Security:</strong> Detecting and preventing unauthorized access or fraudulent activity</li>
+            <li><strong>Account Deletion:</strong> Processing requests to delete your account and associated data</li>
+        </ul>
+    </div>
+
+    <div class="important">
+        <h3>⚠️ Important: Hobby Plan Notice</h3>
+        <p>
+            <strong>KutumbTree is deployed on a Railway Hobby plan in us-west (California, USA).</strong> This means:
+        </p>
+        <ul>
+            <li><strong>Cold Start Delays:</strong> The app may take 30-60 seconds to respond after periods of inactivity, as the server needs to start up</li>
+            <li><strong>Performance:</strong> Response times may be slower during peak usage periods</li>
+            <li><strong>Uptime:</strong> Hobby plans have best-effort uptime (not guaranteed like Pro plans)</li>
+            <li><strong>Region:</strong> Your data is processed in us-west (California). If you are outside the USA, there may be slight latency</li>
+        </ul>
+        <p>
+            These limitations are expected for a hobby/non-commercial deployment. If stability and performance are critical for your use case, consider supporting the project or running your own instance.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>4. Data Storage and Security</h2>
+
+        <h3>4.1 Where Data is Stored</h3>
+        <ul>
+            <li><strong>Backend Server:</strong> Deployed on Railway in us-west (California, USA)</li>
+            <li><strong>Database:</strong> SQLite database on the Railway server</li>
+            <li><strong>File Uploads:</strong> User-generated content (photos) stored in an uploads directory on the server</li>
+        </ul>
+
+        <h3>4.2 Security Measures</h3>
+        <ul>
+            <li><strong>Password Hashing:</strong> Passwords are hashed using bcrypt with salt (never stored in plain text)</li>
+            <li><strong>Authentication:</strong> JWT (JSON Web Tokens) with 15-minute expiration for access tokens</li>
+            <li><strong>Refresh Tokens:</strong> Secure 7-day refresh tokens for session persistence</li>
+            <li><strong>HTTPS:</strong> All communication is encrypted in transit via TLS/SSL</li>
+            <li><strong>Access Control:</strong> User accounts and shared family trees have role-based permissions (owner, editor, viewer)</li>
+            <li><strong>Data Validation:</strong> Input validation and error handling to prevent injection attacks</li>
+        </ul>
+
+        <h3>4.3 Limitations</h3>
+        <p>
+            While we implement reasonable security measures, no system is completely secure. We do not guarantee absolute protection against all attacks or breaches. KutumbTree is provided on an "as-is" basis for personal use.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>5. Data Sharing and Collaboration</h2>
+        <ul>
+            <li><strong>Invited Family Members:</strong> When you invite someone to view or edit a family tree, they can see the information you've shared</li>
+            <li><strong>Account Deletion:</strong> You can request to delete your account and associated data at any time</li>
+            <li><strong>No Third-Party Sharing:</strong> We do not sell or share your data with third parties, advertisers, or data brokers</li>
+            <li><strong>No Analytics Tracking:</strong> We do not use Google Analytics or other third-party analytics services</li>
+            <li><strong>No Ads:</strong> KutumbTree is ad-free</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Permissions and Data Types</h2>
+
+        <h3>6.1 Android Permissions</h3>
+        <p>KutumbTree requests the following Android permissions:</p>
+        <ul>
+            <li><strong>INTERNET:</strong> Required to connect to the backend server</li>
+            <li><strong>READ_EXTERNAL_STORAGE / READ_MEDIA_IMAGES:</strong> Allows you to select photos from your device to upload to your family tree</li>
+            <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Allows you to download or export family tree data</li>
+        </ul>
+
+        <h3>6.2 Data Types Collected</h3>
+        <ul>
+            <li><strong>Personal Information:</strong> Names, email addresses, birth/death dates, gender</li>
+            <li><strong>Photos and Media:</strong> Profile pictures and family photos you choose to upload</li>
+            <li><strong>Relationship Data:</strong> Marriage, parent-child, and sibling relationships</li>
+            <li><strong>User-Generated Content:</strong> Notes, biographical information, and other content you create</li>
+            <li><strong>Device Identifiers:</strong> Device type, OS version (for crash reporting)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. Your Rights and Controls</h2>
+        <ul>
+            <li><strong>Account Access:</strong> You can view your profile and family tree data at any time</li>
+            <li><strong>Account Deletion:</strong> You can delete your account and all associated data by submitting a request through the app</li>
+            <li><strong>Data Export:</strong> You can export your family tree data (if export functionality is available)</li>
+            <li><strong>Collaboration Control:</strong> You can manage who has access to your family trees by adjusting permissions or removing collaborators</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Data Retention</h2>
+        <ul>
+            <li><strong>Active Accounts:</strong> Your data is retained as long as your account is active</li>
+            <li><strong>Deleted Accounts:</strong> When you delete your account, all personal data is removed from our database within 30 days</li>
+            <li><strong>Backups:</strong> We may retain encrypted backups for disaster recovery purposes, which are deleted after 90 days</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Children's Privacy</h2>
+        <p>
+            KutumbTree is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided personal information, we will delete such information promptly.
+        </p>
+        <p>
+            Parents and guardians who believe their child has provided information to KutumbTree should contact us immediately.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>10. Third-Party Services</h2>
+        <p>
+            KutumbTree integrates with optional third-party services for notifications:
+        </p>
+        <ul>
+            <li><strong>Telegram:</strong> Optional notification service for admin events (registration notifications). Telegram's privacy policy applies: <a href="https://telegram.org/privacy" target="_blank">https://telegram.org/privacy</a></li>
+            <li><strong>Email:</strong> Optional email notifications for account events and password resets. Your email provider's privacy policy applies.</li>
+        </ul>
+        <p>
+            These services are optional and require explicit configuration by the app administrator. No personal data is shared unless you opt in.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>11. Changes to This Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last Updated" date at the top of this page or by sending you a notification through the app.
+        </p>
+        <p>
+            Your continued use of KutumbTree after changes indicates your acceptance of the updated Privacy Policy.
+        </p>
+    </div>
+
+    <div class="contact-info">
+        <h2>12. Contact Us</h2>
+        <p>
+            If you have questions, concerns, or requests regarding your privacy or this Privacy Policy, please contact us:
+        </p>
+        <p>
+            <strong>Email:</strong> <a href="mailto:p.jesal.work@gmail.com">p.jesal.work@gmail.com</a>
+        </p>
+        <p>
+            We will respond to your inquiry within 7 business days.
+        </p>
+    </div>
+
+    <hr style="margin-top: 40px; color: #ddd;">
+    <p style="text-align: center; color: #999; font-size: 14px; margin-top: 30px;">
+        © 2026 KutumbTree. All rights reserved.
+    </p>
+</body>
+</html>
